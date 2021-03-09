@@ -43,8 +43,11 @@ public class PlayerMovement : MonoBehaviour
         m_Rotation = Quaternion.LookRotation(desiredForward);
     }
 
+    // applies root motion
     void OnAnimatorMove()
     {
-
+        //move rigidbody and apply rotation
+        m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude);
+        m_Rigidbody.MoveRotation(m_Rotation);
     }
 }
