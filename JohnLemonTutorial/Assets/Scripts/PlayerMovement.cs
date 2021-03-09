@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame (and fixed makes sure movement and rotation work)
     void FixedUpdate()
     {
         //create variables for horizontal and vertical movements
