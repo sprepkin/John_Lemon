@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     Animator m_Animator; //create animator animator
     Vector3 m_Movement; //create movement vector
+    Rigidbody m_Rigidbody; //create rigidbody
     Quaternion m_Rotation = Quaternion.identity; //create stored rotation variable
 
     // Start is called before the first frame update
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //get animator on start
         m_Animator = GetComponent<Animator>();
+        //get rigidbody on start
+        m_Rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -38,5 +41,10 @@ public class PlayerMovement : MonoBehaviour
         //rotate character forward and create rotation in direction of given parameter
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
         m_Rotation = Quaternion.LookRotation(desiredForward);
+    }
+
+    void OnAnimatorMove()
+    {
+
     }
 }
