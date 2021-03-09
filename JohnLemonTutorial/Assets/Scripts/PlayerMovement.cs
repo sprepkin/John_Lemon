@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float turnSpeed; //create turn speed for character
+
     Animator m_Animator; //create animator animator
     Vector3 m_Movement; //create movement vector
 
@@ -31,5 +33,7 @@ public class PlayerMovement : MonoBehaviour
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         //set animator to walking animation
         m_Animator.SetBool("IsWalking", isWalking);
+
+        Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
     }
 }
