@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float turnSpeed; //create turn speed for character
+    public float turnSpeed = 20f; //create turn speed for character
 
     Animator m_Animator; //create animator animator
     Vector3 m_Movement; //create movement vector
+    Quaternion m_Rotation = Quaternion.identity; //create stored rotation variable
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         //set animator to walking animation
         m_Animator.SetBool("IsWalking", isWalking);
 
+        //rotate character forward and create rotation in direction of given parameter
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
+        m_Rotation = Quaternion.LookRotation(desiredForward);
     }
 }
