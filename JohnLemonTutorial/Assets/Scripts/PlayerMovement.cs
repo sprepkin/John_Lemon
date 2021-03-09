@@ -22,5 +22,10 @@ public class PlayerMovement : MonoBehaviour
         //set movement and normalize it (to a unit of 1)
         m_Movement.Set(horizontal, 0f, vertical);
         m_Movement.Normalize();
+
+        //Identify if there is player movement, is walking if vertical or horizontal have value
+        bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
+        bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
+        bool isWalking = hasHorizontalInput || hasVerticalInput;
     }
 }
