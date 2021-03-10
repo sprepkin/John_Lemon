@@ -55,6 +55,14 @@ public class GameEnding : MonoBehaviour
     //executes on end of level
     void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
+        //if audio has played
+        if (!m_HasAudioPlayed)
+        {
+            //play audio and set that audio has been played
+            audioSource.Play();
+            m_HasAudioPlayed = true;
+        }
+
         //timer increases by change in time
         m_Timer += Time.deltaTime; 
 
