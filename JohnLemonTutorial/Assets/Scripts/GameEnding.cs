@@ -42,18 +42,18 @@ public class GameEnding : MonoBehaviour
         if (m_IsPlayerAtExit)
         {
             //trigger exit end of level
-            EndLevel(exitBackgroundImageCanvasGroup, false);
+            EndLevel(exitBackgroundImageCanvasGroup, false, exitAudio);
         }
         //check if player was caught
         else if (m_IsPlayerCaught)
         {
             //trigger caught end of level
-            EndLevel(caughtBackgroundImageCanvasGroup, true);
+            EndLevel(caughtBackgroundImageCanvasGroup, true, caughtAudio);
         }
     }
 
     //executes on end of level
-    void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart)
+    void EndLevel(CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
         //timer increases by change in time
         m_Timer += Time.deltaTime; 
