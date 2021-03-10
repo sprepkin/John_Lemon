@@ -3558,6 +3558,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549c69af39b84624b8a053537c407def, type: 3}
+--- !u!1 &643929229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3278530440134432241, guid: d213deb349b20a24e8b9b5b32e24aa14,
+    type: 3}
+  m_PrefabInstance: {fileID: 1803471079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1504748089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,6 +3754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f4157eb45854a841926e552797c08e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeDuration: 1
+  displayImageDuration: 1
+  player: {fileID: 643929229}
+  exitBackgroundImageCanvasGroup: {fileID: 315973815}
 --- !u!1 &1719896335
 GameObject:
   m_ObjectHideFlags: 0
