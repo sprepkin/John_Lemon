@@ -9,11 +9,14 @@ public class GameEnding : MonoBehaviour
     public float displayImageDuration = 1f; //duration of image display
     public GameObject player; //Reference John Lemon (player) character
     public CanvasGroup exitBackgroundImageCanvasGroup; //Canvas group for the end game image
+    public AudioSource exitAudio; //variable for exit audio
     public CanvasGroup caughtBackgroundImageCanvasGroup; //Canvas group for if player loses
+    public AudioSource caughtAudio; //variable for caught audio
 
     bool m_IsPlayerAtExit; //variable for if player is at the exit
     bool m_IsPlayerCaught; //variable for if player is caught
     float m_Timer; //variable for timer
+    bool m_HasAudioPlayed; //variable if audio has played
 
     //executes on trigger of collider
     void OnTriggerEnter(Collider other)
