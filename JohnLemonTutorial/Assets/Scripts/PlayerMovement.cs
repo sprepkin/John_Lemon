@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Animator m_Animator; //create animator animator
     Vector3 m_Movement; //create movement vector
     Rigidbody m_Rigidbody; //create rigidbody
+    AudioSource m_AudioSource; //add audio source
     Quaternion m_Rotation = Quaternion.identity; //create stored rotation variable
 
     // Start is called before the first frame update
@@ -18,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
         m_Animator = GetComponent<Animator>();
         //get rigidbody on start
         m_Rigidbody = GetComponent<Rigidbody>();
+        //get audio source on start
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame (and fixed makes sure movement and rotation work)
@@ -37,6 +40,21 @@ public class PlayerMovement : MonoBehaviour
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         //set animator to walking animation
         m_Animator.SetBool("IsWalking", isWalking);
+
+        //if John Lemon walking
+        if (isWalking)
+        {
+            //if audio source isn't playing
+            if (!m_AudioSource.isPlaying)
+            {
+                //play audio
+                m_AudioSource.Play();
+            }
+        }
+        else
+        {
+            m_AudioSource.Stop();
+        }
 
         //rotate character forward and create rotation in direction of given parameter
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
