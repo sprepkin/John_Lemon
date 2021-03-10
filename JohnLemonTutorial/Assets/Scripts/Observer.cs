@@ -49,7 +49,8 @@ public class Observer : MonoBehaviour
                 //check if what was hit by the ray is the player
                 if (raycastHit.collider.transform == player)
                 {
-
+                    //player caught game ending
+                    gameEnding.CaughtPlayer();
                 }
             }
         }
