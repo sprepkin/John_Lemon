@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class GameEnding : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float fadeDuration = 1f; //duration of fade variable
+    public GameObject player; //Reference John Lemon (player) character
 
-    // Update is called once per frame
-    void Update()
+    //executes on trigger of collider
+    void OnTriggerEnter(Collider other)
     {
-        
+        //make sure only John Lemon can trigger
+        if (other.gameObject == player)
+        {
+
+        }
     }
 }
