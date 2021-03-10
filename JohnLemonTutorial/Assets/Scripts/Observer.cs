@@ -43,7 +43,7 @@ public class Observer : MonoBehaviour
             //define raycastHit variable
             RaycastHit raycastHit;
 
-            //check if anything has been hit in the ray and in range
+            //check if anything has been hit in the ray
             if (Physics.Raycast(ray, out raycastHit))
             {
                 //check if what was hit by the ray is the player

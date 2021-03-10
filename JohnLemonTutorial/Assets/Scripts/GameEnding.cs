@@ -8,8 +8,10 @@ public class GameEnding : MonoBehaviour
     public float displayImageDuration = 1f; //duration of image display
     public GameObject player; //Reference John Lemon (player) character
     public CanvasGroup exitBackgroundImageCanvasGroup; //Canvas group for the end game image
+    public CanvasGroup caughtBackgroundImageCanvasGroup; //Canvas group for if player loses
 
     bool m_IsPlayerAtExit; //variable for if player is at the exit
+    bool m_IsPlayerCaught; //variable for if player is caught
     float m_Timer; //variable for timer
 
     //executes on trigger of collider
@@ -28,19 +30,24 @@ public class GameEnding : MonoBehaviour
         //check if player is at exit
         if (m_IsPlayerAtExit)
         {
-            //trigger the end of the level if player is at exit
-            EndLevel();
+            //trigger exit end of level
+            EndLevel(exitBackgroundImageCanvasGroup);
+        //check if player was caught
+        else if (m_IsPlayerCaught)
+        {
+            //trigger caught end of level
+            EndLevel(caughtBackgroundImageCanvasGroup);
         }
     }
 
     //executes on end of level
-    void EndLevel()
+    void EndLevel(CanvasGroup imageCanvasGroup)
     {
         //timer increases by change in time
         m_Timer += Time.deltaTime; 
 
-        //change exit image's alpha by time over fade duration
-        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration;
+        //change end game image's alpha by time over fade duration
+        imageCanvasGroup.alpha = m_Timer / fadeDuration;
 
         //if the timer is greater than the fade duration and image display duration
         if (m_Timer > fadeDuration + displayImageDuration)
