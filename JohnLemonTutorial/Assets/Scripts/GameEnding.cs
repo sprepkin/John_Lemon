@@ -39,6 +39,7 @@ public class GameEnding : MonoBehaviour
         {
             //trigger exit end of level
             EndLevel(exitBackgroundImageCanvasGroup, false);
+        }
         //check if player was caught
         else if (m_IsPlayerCaught)
         {
