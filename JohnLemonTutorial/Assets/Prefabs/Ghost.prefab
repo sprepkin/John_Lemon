@@ -504,7 +504,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 5332154096556403347}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &5332154096556403347
 NavMeshAgent:
   m_ObjectHideFlags: 0
