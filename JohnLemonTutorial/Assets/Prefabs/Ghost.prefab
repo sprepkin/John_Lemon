@@ -1002,6 +1002,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointOfView
       objectReference: {fileID: 0}
+    - target: {fileID: 8718850471626039810, guid: d0caa8fb5fb211b4cb4c2b3a01101105,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3278530440134330833, guid: d213deb349b20a24e8b9b5b32e24aa14,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0caa8fb5fb211b4cb4c2b3a01101105, type: 3}
 --- !u!4 &1539416962739640149 stripped
