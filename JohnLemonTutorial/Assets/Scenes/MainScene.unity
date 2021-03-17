@@ -1694,12 +1694,12 @@ PrefabInstance:
     - target: {fileID: 3141749954016554941, guid: d213deb349b20a24e8b9b5b32e24aa14,
         type: 3}
       propertyPath: dashWait
-      value: 0.3
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 3141749954016554941, guid: d213deb349b20a24e8b9b5b32e24aa14,
         type: 3}
       propertyPath: dashSpeed
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3278530440127178297, guid: d213deb349b20a24e8b9b5b32e24aa14,
         type: 3}
