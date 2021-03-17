@@ -1055,6 +1055,10 @@ MonoBehaviour:
   turnSpeed: 20
   dashSpeed: 20
   dashWait: 1
+  renderer: {fileID: 7020732279820014403}
+  playerMaterial: {fileID: 2100000, guid: 5809e0e47ab8ab847bfc4367d8c70ddb, type: 2}
+  playerMaterialTransparent: {fileID: 2100000, guid: 91de13e287ee90a4cbea6686958df9d8,
+    type: 2}
 --- !u!82 &643929230
 AudioSource:
   m_ObjectHideFlags: 0

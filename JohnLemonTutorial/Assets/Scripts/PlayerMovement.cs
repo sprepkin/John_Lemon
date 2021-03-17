@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public float turnSpeed = 20f; //create turn speed for character
     public float dashSpeed = 20f;
     public float dashWait = 1f;
+    public Renderer renderer;
+    public Material playerMaterial;
+    public Material playerMaterialTransparent;
 
     Animator m_Animator; //create animator animator
     Vector3 m_Movement; //create movement vector
@@ -26,13 +29,27 @@ public class PlayerMovement : MonoBehaviour
         m_AudioSource = GetComponent<AudioSource>();
     }
 
+
     void Update()
     {
         if (dashTimer > 0f)
         {
             dashTimer -= Time.deltaTime;
         }
+
+        if (m_Movement.magnitude > 0f)
+        {
+            Material[] mats = new Material[] { playerMaterialTransparent };
+            renderer.materials = mats;
+        }
+
+        if (m_Movement.magnitude <= 0f && dashTimer <= 0)
+        {
+            Material[] mats = new Material[] { playerMaterial };
+            renderer.materials = mats;
+        }
     }
+
 
     // Update is called once per frame (and fixed makes sure movement and rotation work)
     void FixedUpdate()
