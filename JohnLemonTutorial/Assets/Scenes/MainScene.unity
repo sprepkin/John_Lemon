@@ -1734,6 +1734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1803471080}
+    - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
+        type: 3}
       propertyPath: gameEnding
       value: 
       objectReference: {fileID: 1713139283}
@@ -3910,6 +3915,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1803471080}
+    - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
+        type: 3}
       propertyPath: gameEnding
       value: 
       objectReference: {fileID: 1713139283}
@@ -4003,6 +4013,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1803471080}
     - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
         type: 3}
       propertyPath: gameEnding
@@ -4312,6 +4327,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1803471080}
     - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
         type: 3}
       propertyPath: gameEnding
@@ -4990,6 +5010,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1803471080}
     - target: {fileID: 5963521789963651162, guid: 08160260a99a737409c513b1ca3cf6e7,
         type: 3}
       propertyPath: gameEnding
